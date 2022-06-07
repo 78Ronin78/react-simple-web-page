@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Clock from './Clock.js';
 
 function App() {
+  let dateTimeNow = new Date().toLocaleString();
+  let helloWorldReactElement = <h1>Hello world!</h1>
   return (
     <div className="App">
       <header className="App-header">
@@ -17,9 +20,15 @@ function App() {
         >
           Learn React
         </a>
+        <span>Current date and time is {dateTimeNow}.</span>
+        {helloWorldReactElement}
+        <Clock></Clock>
       </header>
+
     </div>
+
   );
+  
 }
 
 export default App;
